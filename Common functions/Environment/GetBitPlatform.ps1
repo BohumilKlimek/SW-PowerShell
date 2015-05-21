@@ -1,6 +1,16 @@
-﻿### Purpose of this function is to return bit platform (32 bit versus 64 bit) on Microsoft operation systems
-    ### No input parameters
-    ### Output: string, which will contain information about bit platform: "64bit" vs "32bit"
+﻿#region Function info
+    ### PURPOSE:
+        ### This function returns bit platform (32 bit versus 64 bit), when executed on any Microsoft operation system.
+
+    ### INPUT:
+        ### No input parameters.
+
+    ### OUTPUT:
+        ### String, which will contain information about bit platform: "64bit" vs "32bit".
+
+    ### DEPENDENCIES:
+        ### No dependencies.
+#endregion
 
 function GetBitPlatfrom ()
 { 
