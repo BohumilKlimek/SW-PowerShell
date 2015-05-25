@@ -5,10 +5,10 @@
 * Just execute "GetLatestRepository.ps1" stored in root of this repository.
 
 ### Content structure
-SW-PowerShell  
-* Common functions  
-* TBD  
-* GetLatestRepository.ps1 (script for downloading this repository)  
-* README.md (this file)  
+* SW-PowerShell  
+* ..Common functions  
+* ..TBD  
+* ..GetLatestRepository.ps1 (script for downloading this repository)  
+* ..README.md (this file)  
 
 
