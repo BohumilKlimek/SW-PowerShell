@@ -7,6 +7,7 @@
 ### Action items
 * Replace GetLatestRepository.ps1 approach with downloading repository zip file and extracting it
 * ..More information can be found on this website: http://www.howtogeek.com/tips/how-to-extract-zip-files-using-powershell/
+* *..Additional documentation can be found on this website: https://technet.microsoft.com/en-us/library/ee176633.aspx?f=255&MSPPError=-2147217396
 * ..Kudos goes to Jan Pelousek for this idea
 
 ### Content structure
