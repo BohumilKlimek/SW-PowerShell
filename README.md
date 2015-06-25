@@ -5,16 +5,20 @@
 * Just execute "GetLatestRepository.ps1" stored in root of this repository.
 
 ### Action items
-* Replace GetLatestRepository.ps1 approach with downloading repository zip file and extracting it
-* ..More information can be found on this website: http://www.howtogeek.com/tips/how-to-extract-zip-files-using-powershell/
-* ..Additional documentation can be found on this website: https://technet.microsoft.com/en-us/library/ee176633.aspx?f=255&MSPPError=-2147217396 
+* Replace GetLatestRepository.ps1 approach with downloading repository in zip file and extracting it to some location.
+* ..Consider deleting old repository if it will exist.
+* Add function for detecting correct version of PowerShell (script execution will be blocked, if lover than 4.0).
 
-### Content structure
+### Long term ideas
+* Create function, which will detect .NET version.
+
+### Content structure + plain description
 * SW-PowerShell  
-* ..Common functions  
-* ..TBD  
-* ..FunctionTemplate.ps1 (template for any new function)
-* ..GetLatestRepository.ps1 (script for downloading whole repository)  
-* ..README.md (this file)  
-
-
+* ..Common functions (DESCRIPTION: logical container)
+* ....Environment (DESCRIPTION: logical container)
+* ......GetBitPlatform.ps1 (DESCRIPTION: function for distinguishing between 32 and 64 platforms)
+* ....Zip (DESCRIPTION: logical container)
+* ......ExtractZipFile.ps1 (DESCRIPTION: function for extracting zip files)
+* ..FunctionTemplate.ps1 (DESCRIPTION: template for any new function)
+* ..GetLatestRepository.ps1 (DESCRIPTION: script for downloading whole repository)  
+* ..README.md (DESCRIPTION: this file)

@@ -10,6 +10,9 @@
 
     ### DEPENDENCIES:
         ### TBD / No dependencies.
+
+    ### KNOWN LIMITATION(S):
+        ### TBD / No limitations.
 #endregion
 
 function TBD ()

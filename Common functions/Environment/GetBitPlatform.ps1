@@ -10,6 +10,9 @@
 
     ### DEPENDENCIES:
         ### No dependencies.
+
+    ### KNOWN LIMITATION(S):
+        ### No limitations.
 #endregion
 
 function GetBitPlatfrom ()
