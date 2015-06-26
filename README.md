@@ -15,11 +15,13 @@
 
 ### Content structure + plain description
 * SW-PowerShell  
-* ..Common functions (DESCRIPTION: logical container)
+* ..Common functions (DESCRIPTION: container for all generic functions)
 * ....Environment (DESCRIPTION: logical container)
 * ......GetBitPlatform.ps1 (DESCRIPTION: function for distinguishing between 32 and 64 platforms)
 * ....Zip (DESCRIPTION: logical container)
 * ......ExtractZipFile.ps1 (DESCRIPTION: function for extracting zip files)
+* ..Orion Platform (DESCRIPTION: container for all Orion Platform specific functions)
+* ..Tools (DESCRIPTION: container for all tools composed from functions)
 * ..FunctionTemplate.ps1 (DESCRIPTION: template for any new function)
 * ..GetLatestRepository.ps1 (DESCRIPTION: script for downloading whole repository)  
 * ..README.md (DESCRIPTION: this file)
