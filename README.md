@@ -5,9 +5,10 @@
 * Just execute "GetLatestRepository.ps1" stored in root of this repository.
 
 ### Action items
-* Replace GetLatestRepository.ps1 approach with downloading repository in zip file and extracting it to some location.
-* ..Consider deleting old repository if it will exist.
 * Add function for detecting correct version of PowerShell (script execution will be blocked, if lover than 4.0).
+* Start working on “GetComponentsVersion.ps1”, which will be in Tools container.
+* ..Intent here is to have pluggable script, which will do its work based on present plugins.
+* ..There will be need to have “GetInstalledModules” function.
 
 ### Long term ideas
 * Create function, which will detect .NET version.
