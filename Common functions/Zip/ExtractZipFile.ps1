@@ -17,6 +17,8 @@
     ### DEPENDENCIES:
         ### There is dependency on "System.IO.Compression.FileSystem" assembly, which isn't loaded by default in PowerShell and needs to be loaded explicitly.
 
+        ### On this function depends: "GetLatestRepository.ps1".
+
     ### KNOWN LIMITATION(S):
         ### There is no possibility to overwrite file(s) if there will be already any. If this happen "ExtractToDirectory" function will throw exception, which is not handled by "ExtractZipFile" function.
 #endregion

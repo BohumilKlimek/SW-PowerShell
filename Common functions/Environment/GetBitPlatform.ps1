@@ -11,6 +11,8 @@
     ### DEPENDENCIES:
         ### No dependencies.
 
+        ### On this function depends: "GetInstalledProducts.ps1".
+
     ### KNOWN LIMITATION(S):
         ### No limitations.
 #endregion

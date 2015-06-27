@@ -14,6 +14,8 @@
     ### DEPENDENCIES:
         ### "ExtractZipFile.ps1" has to be loaded.
 
+        ### No function nor script depends on this function.
+
     ### KNOWN LIMITATION(S):
         ### There is inherited limitation from "ExtractZipFile" function, so if "C:\SW-PowerShell-master\" folder will be detected (in case C is system hard drive letter), this folder will be deleted.
 #endregion
