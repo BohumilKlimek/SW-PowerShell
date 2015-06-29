@@ -45,7 +45,7 @@ function ExtractZipFile ([System.String] $ZipFileLocation = "", [System.String] 
 	### Loading needed dependencies:
         [System.Reflection.Assembly]::LoadWithPartialName("System.IO.Compression.FileSystem") | Out-Null
 
-    ### Main function logic:
+    ### Main function logic - extracting zip file:
         [System.IO.Compression.Zipfile]::ExtractToDirectory($ZipFileLocation, $ExtractionDestination)
 
     return [System.String] "Extraction finished"
