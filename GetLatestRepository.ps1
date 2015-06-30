@@ -23,8 +23,8 @@
 Clear-Host
 
 ### Loading dependencies:
-    #Invoke-WebRequest -Uri "https://raw.githubusercontent.com/BohumilKlimek/SW-PowerShell/master/Common%20functions/Zip/ExtractZipFile.ps1" -OutFile ($env:TEMP + "\ExtractZipFile.ps1")
-    #. ($env:TEMP + "\ExtractZipFile.ps1")
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/BohumilKlimek/SW-PowerShell/master/Common%20functions/Zip/ExtractZipFile.ps1" -OutFile ($env:TEMP + "\ExtractZipFile.ps1")
+    . ($env:TEMP + "\ExtractZipFile.ps1")
 
 ### Deleting "C:\SW-PowerShell-master\" folder (in case C is system hard drive letter) in case it already exists:
     if (Test-Path ($env:SystemDrive + "\SW-PowerShell-master\"))
