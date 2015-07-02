@@ -8,8 +8,8 @@
 * Add function for detecting correct version of PowerShell (script execution will be blocked, if lover than 4.0).
 * Start working on “GetComponentsVersion.ps1”, which will be in Tools container.
 * ..Intent here is to have pluggable script, which will do its work based on present plugins.
-* ..Next needed piece is xml (ProductsInformation.xml), where basic needed information will be stored.
-* ....Information about IsProduct, whould be moved from ConfiguredModules.xml into ProductsInformation.
+* ..Next needed piece is xml (Components.xml), where basic needed information will be stored.
+* ....Information about IsProduct, whould be moved from ConfiguredModules.xml into Components.xml.
 
 ### Long term ideas
 * Create function, which will detect .NET version.
@@ -22,6 +22,7 @@
 * ....Zip (DESCRIPTION: logical container)
 * ......ExtractZipFile.ps1 (DESCRIPTION: function for extracting zip files)
 * ..Orion Platform data (DESCRIPTION: container for all Orion Platform data files)
+* ....Components.xml (DESCRIPTION: all important information about Orion Platform components is stored here)
 * ....ConfiguredModules.xml (DESCRIPTION: configuration IDs for Orion Platform products)
 * ..Orion Platform functions (DESCRIPTION: container for all Orion Platform specific functions)
 * ....GetInstalledProducts.ps1 (DESCRIPTION: function for getting all installed products)
