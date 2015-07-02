@@ -11,6 +11,7 @@
 * ..Next needed piece is xml (Components.xml), where basic needed information will be stored.
 * ....Information about IsProduct, whould be moved from ConfiguredModules.xml into Components.xml.
 * ......Or even better is should be ported all...
+* ..GetInstalledProducts will return also version as it make perfect sense right now.
 
 ### Long term ideas
 * Create function, which will detect .NET version.
