@@ -1,6 +1,6 @@
 #region Function info
     ### PURPOSE:
-        ### This function returns all installed products and its versions.
+        ### This function returns all installed products.
         ### It's done via two simple steps:
             ### Information about configured modules is collected ("HKLM\SOFTWARE\Wow6432Node\SolarWinds.Net\ConfigurationWizard\ConfiguredModules").
             ### Based on transformation ("ConfiguredModules.xml" in repository; https://cp.solarwinds.com/x/jqzgAg on Confluence) product(s) version is determined.
@@ -9,7 +9,7 @@
         ### No input parameters.
 
     ### OUTPUT:
-        ### PSObject, which will contain list of found products and its versions.
+        ### String array, which will contain list of found products.
 
     ### DEPENDENCIES:
         ### "GetBitPlatfrom.ps1" has to be loaded.
@@ -43,14 +43,19 @@ function GetInstalledProducts ()
     ### Loading transformation matrix ("ConfiguredModules.xml"):
         [System.Xml.XmlDocument] $TransformationMatrix = Get-Content -Path ($env:SystemDrive + "\SW-PowerShell-master\Orion Platform data\ConfiguredModules.xml")
     
+    ### Creating empty string array where output of this function will be stored:
+        [System.String[]] $InstalledProducts = @()
+    
     ### Main function logic - transformation logic:
         foreach ($ConfiguredModule in ($TransformationMatrix.root.ConfiguredModule | Where-Object {$_.IsProduct -eq "True"}))
         {
             if ($ConfiguredModules.Contains($ConfiguredModule.ID))
             {
-                ### TO BE EVEN TESTED....
+                ### Updating output variable with needed data:
+                    $InstalledProducts += $ConfiguredModule.Name
             }
         }
     
-    ### return TBD																	   
+    ### Returning function output:
+        return [System.String[]] $InstalledProducts
 }
