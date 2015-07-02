@@ -10,6 +10,7 @@
 * ..Intent here is to have pluggable script, which will do its work based on present plugins.
 * ..Next needed piece is xml (Components.xml), where basic needed information will be stored.
 * ....Information about IsProduct, whould be moved from ConfiguredModules.xml into Components.xml.
+* ......Or even better is should be ported all...
 
 ### Long term ideas
 * Create function, which will detect .NET version.
