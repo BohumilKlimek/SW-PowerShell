@@ -48,5 +48,6 @@ function ExtractZipFile ([System.String] $ZipFileLocation = "", [System.String] 
     ### Main function logic - extracting zip file:
         [System.IO.Compression.Zipfile]::ExtractToDirectory($ZipFileLocation, $ExtractionDestination)
 
-    return [System.String] "Extraction finished"
+    ### Returning function output:
+        return [System.String] "Extraction finished"
 }

@@ -28,5 +28,6 @@ function GetBitPlatfrom ()
 		[System.String] $BitPlatfrom = "32bit"
 	}
 
-    return $BitPlatfrom																			   
+    ### Returning function output:
+        return $BitPlatfrom																			   
 }
