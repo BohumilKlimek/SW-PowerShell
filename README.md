@@ -13,6 +13,10 @@
 * ......Or even better is should be ported all...
 * ..GetInstalledProducts will return also version as it make perfect sense right now.
 
+* Ok, ultimate decision is that each plugin will represent each component and all these will be dynamicaly loaded
+* ..-> based on these will be installed products determined plus their versions
+* ..-> so, lot of changes has to be made...
+
 ### Long term ideas
 * Create function, which will detect .NET version.
 
