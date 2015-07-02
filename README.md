@@ -8,7 +8,7 @@
 * Add function for detecting correct version of PowerShell (script execution will be blocked, if lover than 4.0).
 * Start working on “GetComponentsVersion.ps1”, which will be in Tools container.
 * ..Intent here is to have pluggable script, which will do its work based on present plugins.
-* ..There will be need to have “GetInstalledModules” function.
+* ..Next needed piece is xml (ProductsInformation.xml), where basic needed information will be stored.
 
 ### Long term ideas
 * Create function, which will detect .NET version.
