@@ -9,6 +9,7 @@
 * Start working on “GetComponentsVersion.ps1”, which will be in Tools container.
 * ..Intent here is to have pluggable script, which will do its work based on present plugins.
 * ..Next needed piece is xml (ProductsInformation.xml), where basic needed information will be stored.
+* ....Information about IsProduct, whould be moved from ConfiguredModules.xml into ProductsInformation.
 
 ### Long term ideas
 * Create function, which will detect .NET version.
