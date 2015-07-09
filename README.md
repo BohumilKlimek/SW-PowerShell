@@ -12,6 +12,7 @@
 * Ok, ultimate decision is that each plugin will represent each component and all these will be dynamicaly loaded
 * ..-> based on these will be installed products determined plus their versions
 * ..-> so, lot of changes has to be made...
+* ..-> plus do template for plugin.
 
 ### Long term ideas
 * Create function, which will detect .NET version.
