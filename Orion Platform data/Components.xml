@@ -6,21 +6,21 @@
 	<!-- Configuration ID is based on following Confluence page: https://cp.solarwinds.com/x/jqzgAg -->
 
 <root>
-	<Component Name="DPI">
+	<Component Name="QoE" ModuleName="DPI">
 		<IsProduct Value="False"/>
-		<ProductDisplayName PathInRegistry=""/>
+		<ProductDisplayName InRegistry="Orion\DPI"/>
 		<Configuration ID="4268"/>
 	</Component>
 	
-	<Component Name="NPM">
+	<Component Name="NPM" ModuleName="NPM">
 		<IsProduct Value="True"/>
-		<ProductDisplayName PathInRegistry="Orion\NPM" PropertyName="ProductDisplayName"/>
+		<ProductDisplayName InRegistry="Orion\NPM"/>
 		<Configuration ID="4570"/>
 	</Component>
 	
-	<Component Name="Orion Platform">
+	<Component Name="Orion Platform" ModuleName="Orion">
 		<IsProduct Value="False"/>
-		<ProductDisplayName PathInRegistry=""/>
+		<ProductDisplayName InRegistry="Orion\Core"/>
 		<Configuration ID="1"/>
 	</Component>
 </root>
