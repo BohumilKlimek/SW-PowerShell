@@ -3,13 +3,13 @@
         ### This function returns all installed products.
         ### It's done via two simple steps:
             ### Information about configured modules is collected ("HKLM\SOFTWARE\Wow6432Node\SolarWinds.Net\ConfigurationWizard\ConfiguredModules").
-            ### Based on transformation ("ConfiguredModules.xml" in repository; https://cp.solarwinds.com/x/jqzgAg on Confluence) product(s) version is determined.
+            ### Based on transformation ("Components.xml" in repository; https://cp.solarwinds.com/x/jqzgAg on Confluence) product(s) version is determined.
 
     ### INPUT:
         ### No input parameters.
 
     ### OUTPUT:
-        ### String array, which will contain list of found products.
+        ### PSObject, which will contain list of found products and its version.
 
     ### DEPENDENCIES:
         ### "GetBitPlatfrom.ps1" has to be loaded.
@@ -40,22 +40,25 @@ function GetInstalledProducts ()
     ### Reading configured modules values:
         [System.String[]] $ConfiguredModules = (Get-item -Path ($SolarWindsNetRegistryRoot + "ConfigurationWizard\ConfiguredModules")).Property
 
-    ### Loading transformation matrix ("ConfiguredModules.xml"):
-        [System.Xml.XmlDocument] $TransformationMatrix = Get-Content -Path ($env:SystemDrive + "\SW-PowerShell-master\Orion Platform data\ConfiguredModules.xml")
+    ### Loading information about products and its components ("Components.xml"):
+        [System.Xml.XmlDocument] $ComponentsInformation = Get-Content -Path ($env:SystemDrive + "\SW-PowerShell-master\Orion Platform data\Components.xml")
     
-    ### Creating empty string array where output of this function will be stored:
-        [System.String[]] $InstalledProducts = @()
+    ### Creating empty PSObject where output of this function will be stored:
+        [System.Management.Automation.PSObject] $InstalledProducts = New-Object PSObject
     
     ### Main function logic - transformation logic:
-        foreach ($ConfiguredModule in ($TransformationMatrix.root.ConfiguredModule | Where-Object {$_.IsProduct -eq "True"}))
+        foreach ($Component in ($ComponentsInformation.root.Component))
         {
-            if ($ConfiguredModules.Contains($ConfiguredModule.ID))
+            if ($Component.IsProduct.Value -eq [System.String] "True")
             {
-                ### Updating output variable with needed data:
-                    $InstalledProducts += $ConfiguredModule.Name
+                if ($ConfiguredModules.Contains($Component.Configuration.ID))
+                {
+                    ### Updating output variable with needed data:
+                        Add-Member -InputObject $InstalledProducts -MemberType NoteProperty -Name $Component.Name -Value "TBD"
+                }
             }
         }
     
     ### Returning function output:
-        return [System.String[]] $InstalledProducts
+        return [System.Management.Automation.PSObject] $InstalledProducts
 }

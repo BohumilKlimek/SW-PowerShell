@@ -14,7 +14,7 @@
 	
 	<Component Name="NPM">
 		<IsProduct Value="True"/>
-		<ProductDisplayName PathInRegistry=""/>
+		<ProductDisplayName PathInRegistry="Orion\NPM" PropertyName="ProductDisplayName"/>
 		<Configuration ID="4570"/>
 	</Component>
 	
